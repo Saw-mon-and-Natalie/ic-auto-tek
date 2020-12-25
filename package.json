@@ -1,0 +1,49 @@
+{
+  "name": "ic-auto-tek",
+  "version": "1.0.0",
+  "description": "Website for IC Auto Tek",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development next dev",
+    "build": "next build",
+    "export": "next export",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saw-mon-and-Natalie/ic-auto-tek.git"
+  },
+  "keywords": [
+    "Saw-mon-and-Natalie",
+    "IC-AUTO-TEK",
+    "Next.js",
+    "React"
+  ],
+  "author": "Saw-mon and Natalie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Saw-mon-and-Natalie/ic-auto-tek/issues"
+  },
+  "homepage": "https://github.com/Saw-mon-and-Natalie/ic-auto-tek#readme",
+  "dependencies": {
+    "framer": "^1.2.11",
+    "framer-motion": "^3.1.1",
+    "intersection-observer": "^0.12.0",
+    "locomotive-scroll": "^4.0.6",
+    "next": "^10.0.3",
+    "postcss-easing-gradients": "^3.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-intersection-observer": "^8.31.0",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "babel-plugin-import-glob": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.1",
+    "react-svg-loader": "^3.0.3",
+    "tailwindcss": "^2.0.2"
+  }
+}

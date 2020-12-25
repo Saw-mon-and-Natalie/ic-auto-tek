@@ -1,0 +1,119 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+body {
+  font-family: 'inter';
+}
+
+/* Write your own custom component styles here */
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+
+@layer utilities {
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+
+  .scroll-snap-x {
+    scroll-snap-type: x;
+  }
+
+  .scroll-snap-y {
+    scroll-snap-type: y;
+  }
+
+
+  .shade {
+      background: linear-gradient(
+          to bottom,
+          hsla(0, 0%, 0%, 0.54) 0%,
+          hsla(0, 0%, 0%, 0.533) 8.1%,
+          hsla(0, 0%, 0%, 0.514) 15.5%,
+          hsla(0, 0%, 0%, 0.484) 22.5%,
+          hsla(0, 0%, 0%, 0.445) 29%,
+          hsla(0, 0%, 0%, 0.4) 35.3%,
+          hsla(0, 0%, 0%, 0.35) 41.2%,
+          hsla(0, 0%, 0%, 0.297) 47.1%,
+          hsla(0, 0%, 0%, 0.243) 52.9%,
+          hsla(0, 0%, 0%, 0.19) 58.8%,
+          hsla(0, 0%, 0%, 0.14) 64.7%,
+          hsla(0, 0%, 0%, 0.095) 71%,
+          hsla(0, 0%, 0%, 0.056) 77.5%,
+          hsla(0, 0%, 0%, 0.026) 84.5%,
+          hsla(0, 0%, 0%, 0.007) 91.9%,
+          hsla(0, 0%, 0%, 0) 100%
+        );
+  }
+
+  @variants responsive {
+    .writing-mode-horizontal { writing-mode: horizontal-tb }
+    .writing-mode-vertical { writing-mode: vertical-lr }  
+  }
+}
