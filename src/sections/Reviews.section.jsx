@@ -10,6 +10,7 @@ const ReviewsSection = () => {
 				className="absolute top-0 left-0"
 				position="absolute"
 				src="/img/ic-auto-tek-inside-04.jpg"
+				alt="Eivaz Hashemi playing with a dog after he has finished helping all the customers with their vehicle issues in IC Auto Tek garage shop in North Vancouver, BC."
 				width="100%"
 				height="100vh"
 				backgroundColor="#273d5f"
@@ -58,9 +59,7 @@ export default ReviewsSection
 
 const ReviewsSlide = ({ children }) => {
 	const numSlides = React.Children.count(children)
-	const [currentSlide, setCurrentSlide] = useState(
-		Math.floor(Math.random() * numSlides)
-	)
+	const [currentSlide, setCurrentSlide] = useState(0)
 	const cID = useRef(null)
 
 	const onNext = () => {
@@ -89,11 +88,7 @@ const ReviewsSlide = ({ children }) => {
 				{React.Children.map(children, (child, i) => {
 					return (
 						<div
-							className={
-								currentSlide == i
-									? 'absolute top-0 left-0 text-sm lg:text-base transition-opacity  duration-500 delay-500 opacity-100'
-									: 'absolute top-0 left-0 text-sm lg:text-base transition-opacity  duration-500 opacity-0'
-							}
+							className={`absolute top-0 left-0 text-sm lg:text-base transition-opacity duration-500 delay-500 ${currentSlide == i ? 'opacity-100' : 'opacity-0'}`}
 						>
 							{child}
 						</div>

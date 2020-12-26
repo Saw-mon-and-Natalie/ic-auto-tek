@@ -4,86 +4,124 @@ import ResponsivePicture from '../components/Media/ResponsivePicture'
 import { useIntersectionObserver } from '../src/hooks'
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
+import { BreadcrumbJsonLd, NextSeo } from 'next-seo'
+
+const url = process.env.NEXT_PUBLIC_BASEURL + '/services'
+const title = 'Services | IC Auto Tek - Auto Repairs and Inspections'
+const description = "IC Auto Tek provide all the auto services your motor vehicle would need in 1 shop on lower londsdale. From free diagnostics to full tune-ups and maintainance, IC Auto Tek is here to help you get on the road as soon as possible while making sure your vehicle is well maintained and safe."
 
 const Services = () => {
 	return (
-		<SmoothScrollProvider options={{ smooth: true }}>
-			<SlideScroll>
-				<ServiceSection
-					name="Full Service &amp; Oil Change"
-					img="/img/ic-auto-tek-tools.jpg"
-					className="mt-20"
-				>
-					<Tag name="$60 - $70" />
-					<p className="mt-2 mb-4">
-						We can work on all models with regular oil, inspect and
-						replace, with any extra advice given, if needed.
-					</p>
-					<Tag name="$80 - $100" />
-					<p className="mt-2 mb-4">
-						We also work on Premium models eg. Mercedes-Benz, BMW,
-						and Audi.
-					</p>
-				</ServiceSection>
-				<ServiceSection
-					name="Electrical Service"
-					img="/img/ic-auto-tek-inspection-06.jpg"
-				>
-					<Tag name="from $90" />
-					<p className="mt-2 mb-4">
-						As two technician’s specialising in Electric’s, an in
-						depth assessment is carried out.
-					</p>
-					<p className="mt-2 mb-4">
-						Services fall under a short in system, replacement of
-						defective modules, computer analysis, rewiring, camera
-						installation, etc.
-					</p>
-				</ServiceSection>
-				<ServiceSection
-					name="Engine Service"
-					img="/img/ic-auto-tek-inspection-04.jpg"
-				>
-					<Tag name="from $80" />
-					<p className="mt-2 mb-4">
-						We run a full assessment for Engine Maintenance and all
-						works needed will be discussed and then carried out.
-						Cylinder Head gasket change, Valve replacements etc.
-					</p>
-				</ServiceSection>
-				<ServiceSection
-					name="Brake Service"
-					img="/img/ic-auto-tek-inspection-03.jpg"
-				>
-					<p className="mt-2 mb-4">
-						Here we can change rotors, replace brake pads, change
-						hoses, bleed and refill, ABS service, traction control
-						adjustment, etc. We are thorough and will have you
-						safely on your way in no time.
-					</p>
-				</ServiceSection>
-				<ServiceSection
-					name="Suspension Service"
-					img="/img/ic-auto-tek-inspection-07.jpg"
-				>
-					<p className="mt-2 mb-4">
-						Mechanical suspension adjustments and fine tuning on all
-						models.
-					</p>
-				</ServiceSection>
-				<ServiceSection
-					name="Exclusive Parts"
-					img="/img/ic-auto-tek-research-04.jpg"
-				>
-					<Tag name="honest labour fees" />
-					<p className="mt-2 mb-4">
-						We charge an honest labour fee, all exclusive/extra
-						parts are added on top, with a large discount when
-						brought through us.
-					</p>
-				</ServiceSection>
-			</SlideScroll>
-		</SmoothScrollProvider>
+		<>
+			<BreadcrumbJsonLd 
+				itemListElements={[
+					{
+						position: 1,
+						name: 'Services',
+						item: url
+					},
+				]}
+			/>
+			<NextSeo 
+				title={title}
+				description={description}
+				canonical={url}
+
+				twitter={{
+					title: title,
+					description: description,
+				}}
+
+				openGraph={{
+					url: url,
+					title: title,
+					description: description,
+				}}
+			/>
+			<SmoothScrollProvider options={{ smooth: true }}>
+				<SlideScroll>
+					<ServiceSection
+						name="Full Service &amp; Oil Change"
+						img="/img/ic-auto-tek-tools.jpg"
+						alt="Automotive tool desk filled with wrenches, sockets, hammer, nots and bolts."
+						className="mt-20"
+					>
+						<Tag name="$60 - $70" />
+						<p className="mt-2 mb-4">
+							We can work on all models with regular oil, inspect and
+							replace, with any extra advice given, if needed.
+						</p>
+						<Tag name="$80 - $100" />
+						<p className="mt-2 mb-4">
+							We also work on Premium models eg. Mercedes-Benz, BMW,
+							and Audi.
+						</p>
+					</ServiceSection>
+					<ServiceSection
+						name="Electrical Service"
+						img="/img/ic-auto-tek-inspection-06.jpg"
+						alt="Masoud Varghan, IC Auto Tek automotive technician inspecting the electrical wires and computer modules in a car."
+					>
+						<Tag name="from $90" />
+						<p className="mt-2 mb-4">
+							As two technician’s specialising in Electric’s, an in
+							depth assessment is carried out.
+						</p>
+						<p className="mt-2 mb-4">
+							Services fall under a short in system, replacement of
+							defective modules, computer analysis, rewiring, camera
+							installation, etc.
+						</p>
+					</ServiceSection>
+					<ServiceSection
+						name="Engine Service"
+						img="/img/ic-auto-tek-inspection-04.jpg"
+						alt="Eivaz Hashemi, the IC Auto Tek owner and technician inspecting a car engine and vacuum lines."
+					>
+						<Tag name="from $80" />
+						<p className="mt-2 mb-4">
+							We run a full assessment for Engine Maintenance and all
+							works needed will be discussed and then carried out.
+							Cylinder Head gasket change, Valve replacements etc.
+						</p>
+					</ServiceSection>
+					<ServiceSection
+						name="Brake Service"
+						img="/img/ic-auto-tek-inspection-03.jpg"
+						alt="Eivaz Hashemi, the IC Auto Tek owner and technician diagnosing irregular engine and brake sounds."
+					>
+						<p className="mt-2 mb-4">
+							Here we can change rotors, replace brake pads, change
+							hoses, bleed and refill, ABS service, traction control
+							adjustment, etc. We are thorough and will have you
+							safely on your way in no time.
+						</p>
+					</ServiceSection>
+					<ServiceSection
+						name="Suspension Service"
+						img="/img/ic-auto-tek-inspection-07.jpg"
+						alt="Eivaz Hashemi, the IC Auto Tek owner and technician inspecting transmission and radiator problems."
+					>
+						<p className="mt-2 mb-4">
+							Mechanical suspension adjustments and fine tuning on all
+							models.
+						</p>
+					</ServiceSection>
+					<ServiceSection
+						name="Exclusive Parts"
+						img="/img/ic-auto-tek-research-04.jpg"
+						alt="Masoud Varghan, IC Auto Tek automotive technician running a full on-board diagnostics on a vehicle."
+					>
+						<Tag name="honest labour fees" />
+						<p className="mt-2 mb-4">
+							We charge an honest labour fee, all exclusive/extra
+							parts are added on top, with a large discount when
+							brought through us.
+						</p>
+					</ServiceSection>
+				</SlideScroll>
+			</SmoothScrollProvider>
+		</>
 	)
 }
 

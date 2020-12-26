@@ -18,6 +18,7 @@ export const Eivaz = () => {
 				<ResponsivePicture
 					position="relative"
 					src="/img/ic-auto-tek-eivaz-hashemi.jpg"
+					alt="Eivaz Hashemi, the owner and automotive technician of IC Auto Tek automotive shop in Northshore, BC."
 					width="100%"
 					height="100%"
 					backgroundColor="rgba(200,200,200, 0.1)"
@@ -43,6 +44,7 @@ export const Masoud = () => {
 				<ResponsivePicture
 					position="relative"
 					src="/img/ic-auto-tek-masoud-varghan.jpg"
+					alt="Masoud Varghan, an IC Auto Tek technician. North Vancouver, BC."
 					width="100%"
 					height="100%"
 					backgroundColor="rgba(200,200,200, 0.1)"

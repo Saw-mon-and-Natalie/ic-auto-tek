@@ -12,6 +12,7 @@ const IndexTopSection = () => {
 				className="absolute top-0 left-0"
 				position="absolute"
 				src="/img/ic-auto-tek-outside-05.jpg"
+				alt="Front of IC Auto Tek automotive shop in North Vancouver, BC."
 				width="100%"
 				height="100vh"
 				backgroundColor="#273d5f"

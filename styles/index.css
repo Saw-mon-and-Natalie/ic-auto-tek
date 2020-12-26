@@ -6,10 +6,6 @@
 @tailwind components;
 /* Stop purging. */
 
-body {
-  font-family: 'inter';
-}
-
 /* Write your own custom component styles here */
 
 html.has-scroll-smooth {

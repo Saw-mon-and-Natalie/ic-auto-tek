@@ -8,4 +8,12 @@
 - [ ] https://github.com/desandro/imagesloaded/blob/master/imagesloaded.js
 - [ ] https://www.youtube.com/c/WrongAkram/videos
 - [x] Add Hours
-- [ ] Finish Menu |||
+- [x] Finish Menu |||
+- [ ] Meta Tags
+- [x] Alt text
+- [x] Crop Images
+- [ ] Favicon
+- [ ] Sitemap.xml generator
+- [ ] Service Worker
+- [ ] PWA
+- [ ] manifest.json

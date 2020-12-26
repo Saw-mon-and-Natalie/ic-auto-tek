@@ -7,6 +7,7 @@ const OurVisionSection = () => {
 				<ResponsivePicture
 					position="relative"
 					src="/img/ic-auto-tek-inside-01.jpg"
+					alt="Inside of IC Auto Tek automotive car mechanics shop in North Vancouver, BC."
 					width="100%"
 					height="100%"
 					backgroundColor="rgba(200,200,200, 0.1)"

@@ -26,6 +26,7 @@ const AboutCompanySection = () => {
 				<ResponsivePicture
 					position="relative"
 					src="/img/ic-auto-tek-inside-07.jpg"
+					alt="A BMW car fully rebuilt and fixed in IC Auto Tek automotive shop in North Vancouver, BC."
 					width="100%"
 					height="100%"
 					backgroundColor="rgba(200,200,200, 0.1)"
