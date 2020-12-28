@@ -24,3 +24,4 @@
 - [ ] Embed IPTC metadata in images
 - [ ] Move To CloudFlare from GoDaddy
 - [ ] Upload to Netlify
+- [x] Add alt to SVG Icons

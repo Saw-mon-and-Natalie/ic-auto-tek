@@ -1,5 +1,13 @@
-export const Icon = ({ children, className, style }) => (
-	<svg className={className ? `${className}` : "w-6 h-6"} fill="none" viewBox="0 0 24 24" stroke="currentColor" style={style}>
+export const Icon = ({ children, className, style, alt='' }) => (
+	<svg 
+		role="img"
+		alt={alt}
+		className={className ? `${className}` : "w-6 h-6"} 
+		fill="none" 
+		viewBox="0 0 24 24" 
+		stroke="currentColor" 
+		style={style}
+	>
 		{children}
 	</svg>
 )

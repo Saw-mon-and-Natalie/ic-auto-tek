@@ -1,7 +1,7 @@
 import Icon from './index'
 
 export const ChevronRightIcon = ({ className, style }) => (
-	<Icon className={className} style={style}>
+	<Icon className={className} style={style} alt="Chevron right icon">
 		<path
             strokeLinecap="round"
             strokeLinejoin="round"
