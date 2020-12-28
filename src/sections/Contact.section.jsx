@@ -44,6 +44,7 @@ export default ContactSection
 
 const Map = () => (
 	<iframe
+		title="IC Auto Tek location on Google Map"
 		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41616.71191077172!2d-123.08872281122679!3d49.31344101966784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548670527e5c2099%3A0xefc083d24c10a6fe!2sIC%20Auto%20Tek!5e0!3m2!1sen!2sca!4v1608619625704!5m2!1sen!2sca"
 		className="bg-indigo-600"
 		width="100%"

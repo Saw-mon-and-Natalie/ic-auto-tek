@@ -88,7 +88,7 @@ const ReviewsSlide = ({ children }) => {
 				{React.Children.map(children, (child, i) => {
 					return (
 						<div
-							className={`absolute top-0 left-0 text-sm lg:text-base transition-opacity duration-500 delay-500 ${currentSlide == i ? 'opacity-100' : 'opacity-0'}`}
+							className={`absolute top-0 left-0 text-sm lg:text-base transition-opacity duration-500 ${currentSlide == i ? 'delay-500 opacity-100' : 'opacity-0'}`}
 						>
 							{child}
 						</div>

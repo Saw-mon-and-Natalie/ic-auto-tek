@@ -190,9 +190,6 @@ const image = process.env.NODE_ENV == 'development' ? url + '/ic-auto-tek-outsid
 const InnerLayout = ({ children }) => {
     return (
         <>
-			<Head>
-				<meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes" />
-			</Head>
             <DefaultSeo 
 				title={title}
 				description={description}
@@ -205,6 +202,22 @@ const InnerLayout = ({ children }) => {
 					{
 						name: 'theme-color',
 						content: '#5a7092'
+					},
+					{
+						name: 'apple-mobile-web-app-title',
+						content: title,
+					},
+					{
+						name: 'application-name',
+						content: title
+					},
+					{
+						name: 'msapplication-TileColor',
+						content: '#ffffff'
+					},
+					{
+						name: 'referrer',
+						content: 'origin-when-cross-origin'
 					},
 				]}
 

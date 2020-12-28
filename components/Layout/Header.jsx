@@ -14,7 +14,6 @@ const Header = () => {
   const [open, setOpen] = useState(false)
 
   const onMenuClick = () => {
-    console.log('click')
     setOpen( o => !o )
   }
   return (

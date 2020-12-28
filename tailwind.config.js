@@ -1,8 +1,22 @@
 module.exports = {
-	purge: [
-		'./components/**/*.{js,ts,jsx,tsx}',
-		'./pages/**/*.{js,ts,jsx,tsx}',
-	],
+	purge: {
+		content: [
+			'./components/**/*.{js,ts,jsx,tsx}',
+			'./pages/**/*.{js,ts,jsx,tsx}',
+			'./containers/**/*.{js,ts,jsx,tsx}',
+			'./src/sections/**/*.{js,ts,jsx,tsx}',
+			'./src/icons/**/*.{js,ts,jsx,tsx}',
+		],
+		options: {
+		  whitelist: [
+			  'delay-500',
+			  'duration-500',
+			  'transition-opacity',
+			  'opacity-100',
+			  'opacity-0'
+		  ],
+		},
+	  },
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {

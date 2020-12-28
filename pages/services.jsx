@@ -148,7 +148,6 @@ const ServiceSection = ({ name, img, alt = '', children, className }) => {
 
 	useEffect(() => {
 		if(inView) {
-			console.log(inView)
 			controls.start("animate")
 		} else {
 			controls.start("initial")
